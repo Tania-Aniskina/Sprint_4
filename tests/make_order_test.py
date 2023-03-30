@@ -4,7 +4,6 @@ from page_objects.order_form_order_page import OrderFormPage
 
 
 class TestMakeOrder:
-    # Проверка создания заказа по кнопке в шапке
     @allure.title('Cоздание заказа по кнопке в шапке')
     def test_make_order_header_btn(self, driver):
         order_form = OrderFormPage(driver)
@@ -30,7 +29,6 @@ class TestMakeOrder:
         order_form.push_yes_btn()
         order_form.check_yes_btn_to_succesful()
 
-    # Проверка создания заказа по кнопке в середине страницы
     @allure.title('Cоздание заказа по кнопке в середине страницы')
     def test_make_order_middle_btn(self, driver):
         order_form = OrderFormPage(driver)
@@ -56,5 +54,3 @@ class TestMakeOrder:
         order_form.check_yes_btn_enabled()
         order_form.push_yes_btn()
         order_form.check_yes_btn_to_succesful()
-
-
